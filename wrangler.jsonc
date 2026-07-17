@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "second-brain-app",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-07-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "no_bundle": true,
+  "assets": {
+    "directory": "dist/client"
+  },
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": ["dist/server/**/*.js", "dist/server/**/*.mjs"]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
